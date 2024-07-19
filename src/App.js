@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import PlaceForm from './components/PlaceForm';
+import PlaceList from './components/PlaceList';
 
 function App() {
+  const [places, setPlaces] = useState([]);
+
+  const addPlace = (place) => {
+    setPlaces([...places, place]);
+  };
+
+  const editPlace = (index, updatedPlace) => {
+    const updatedPlaces = places.map((place, i) => (i === index ? updatedPlace : place));
+    setPlaces(updatedPlaces);
+  };
+
+  const removePlace = (index) => {
+    const updatedPlaces = places.filter((_, i) => i !== index);
+    setPlaces(updatedPlaces);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Lista de Lugares para Viajar</h1>
+      <PlaceForm addPlace={addPlace} />
+      <PlaceList places={places} editPlace={editPlace} removePlace={removePlace} />
     </div>
   );
 }

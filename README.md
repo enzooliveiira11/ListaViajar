@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+Lista de Lugares para Viajar
+Tema Recebido
+Este projeto consiste em uma aplicação web para gerenciar uma lista de lugares para viajar. Utilizando a biblioteca React, a aplicação aborda conceitos de componentes, props e hooks.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Estrutura do Projeto
+O projeto está organizado da seguinte forma:
 
-## Available Scripts
+java
 
-In the project directory, you can run:
+listaviajar/
+│
+├── public/
+│   ├── index.html
+│   └── ...
+│
+├── src/
+│   ├── components/
+│   │   ├── PlaceForm.js
+│   │   ├── PlaceList.js
+│   │   └── PlaceItem.js
+│   ├── App.js
+│   ├── index.js
+│   └── styles.css
+│
+└── package.json
+Tecnologias Utilizadas
+React
+CSS
+Funcionalidades
+Adicionar novos lugares através de um formulário
+Listar os lugares adicionados
+Editar e remover lugares da lista
+Requisitos
+Para rodar a aplicação, você precisa ter o Node.js instalado.
 
-### `npm start`
+Instruções de Instalação e Uso
+Clone o repositório:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+git clone <URL do repositório>
+cd listaviajar
+Instale as dependências:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+npm install
+Inicie a aplicação:
 
-### `npm test`
+bash
+npm start
+Acesse a aplicação:
+Abra o navegador e acesse http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Componentes
+App.js
+O componente principal que gerencia a aplicação. Ele mantém o estado dos lugares e define as funções para adicionar, atualizar e remover lugares.
 
-### `npm run build`
+PlaceForm.js
+Componente responsável por renderizar o formulário para adicionar novos lugares. Utiliza um estado local para controlar o valor do campo de entrada. Recebe uma função como prop para adicionar o novo lugar ao estado da aplicação.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+PlaceList.js
+Componente responsável por renderizar a lista de lugares adicionados. Recebe como props a lista de lugares e as funções para atualizar e remover lugares.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+PlaceItem.js
+Componente responsável por renderizar cada item individual da lista de lugares. Permite editar o nome do lugar e removê-lo da lista, utilizando funções passadas via props.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Estilos
+Os estilos da aplicação estão definidos no arquivo styles.css. Este arquivo inclui a configuração de layout, cores e responsividade para garantir que a aplicação seja visualmente agradável e utilizável em diferentes tamanhos de tela.
